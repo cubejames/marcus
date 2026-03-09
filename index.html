@@ -24,6 +24,7 @@ body {
   background: #000;
   color:#ccc;
   font-size:1.5em;
+	padding:2px;
 }
 
 .box {
@@ -58,8 +59,21 @@ body {
   background-position: bottom;
 }
 
+.john:hover {
+  animation:john 5s linear 0s infinite normal;
+}
+
 @keyframes ball {
   100% {transform:rotate(360deg);}
+}  
+@keyframes john {
+  0% {background-color:#f00;}
+  16% {background-color:#ff0;}
+  33% {background-color:#0f0;}
+  50% {background-color:#0ff;}
+  66% {background-color:#00f;}
+  83% {background-color:#f0f;}
+  100% {background-color:#f00;}
 }  
 
   </style>
@@ -85,11 +99,11 @@ body {
   </div>
   <br><br>
   <div class="box">
-		marcus ridge's greatest academic rival is the majestic and glorious john huang.
+		marcus ridge's greatest academic rival is <span class="john">the majestic and glorious john huang.</span>
 		despite achieving somewhat similar results throughout their education together from primary school to high school, john has a certain amount of aura that marcus simply cannot compete with.
 		marcus' jealousy has driven him into a state of madness where he dedicates all of his time to surpassing john.
 		this is considered to be one of the most integral factors to his academic success.
-	<div>
+  </div>
   <br><br>
   <div class="wojak"></div>
 </body>
