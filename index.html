@@ -197,9 +197,50 @@ h2 {
 		It is his most popular work yet and includes songs such as "Tango With The Devil Really Good", "Subpar Assessment Result Moment", and "Tatva Patel Didn't Return My Welcoming Hug".
 		It became very popular amongst both his peers in New Zealand and his existing following in South Korea.
 	</div>
+  <div class="box">
+		<h2>Cousins</h2>
+		marcus has a lot of cousins. discussing them all would make this page impossible, so a random one has been selected as an example.
+		<span id="cousin"></span>
+		very little about them is known, so this whole cousin thing is probably not very helpful.
+	</div>
   <div class="wojak"></div>
 	<script>
+
+function rarr(array) {return array[Math.floor(Math.random() * array.length)];};
+function rint(min, max) {return Math.floor(Math.random() * (max - min + 1) ) + min;};
 document.getElementById("fluid").addEventListener("click",() => {alert("got you to touch it")})
+
+const cousinNames = [
+	"Johnny",
+	"Abel",
+	"Jackie",
+	"Sky",
+	"Forrest",
+	"Billy",
+	"Jerry",
+	"Terry",
+	"Lorenzo",
+	"April",
+	"Tobias",
+	"Jimothy",
+	"Dartholomew",
+	"Sherry"
+];
+const cousinSurnames = [
+	"Ridge",
+	"Tamagotchi",
+	"Hyphenson",
+	"Large",
+	"China",
+	"Cougarlung",
+	"Farmer",
+	"Anchorage",
+	"Rootin-Tootin",
+	"Ellipse",
+	"Calculus",
+	"Louis-Louis"
+];
+document.getElementById("cousin").innerText = `marcus has a {rarr(["first","second"])} cousin named {rarr(cousinNames)} {rarr(cousinSurnames)} who is {rint(5,33)} years old.`;
 	</script>
 </body>
 </html>
