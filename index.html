@@ -201,7 +201,6 @@ h2 {
 		<h2>Cousins</h2>
 		marcus has a lot of cousins. discussing them all would make this page impossible, so a random one has been selected as an example.
 		<span id="cousin"></span>
-		very little about them is known, so this whole cousin thing is probably not very helpful.
 	</div>
   <div class="wojak"></div>
 	<script>
@@ -240,7 +239,44 @@ const cousinSurnames = [
 	"Calculus",
 	"Louis-Louis"
 ];
-document.getElementById("cousin").innerText = `marcus has a ${rarr(["first","second"])} cousin named ${rarr(cousinNames)} ${rarr(cousinSurnames)} who is ${rint(5,33)} years old.`;
+const collection = [
+	"stamp",
+	"booger",
+	"action figure",
+	"ornate cupboard door",
+	"burger",
+	"computer mouse",
+	"chair",
+	"microcontroller"
+];
+const cousinKnownFor = [
+	"extreme basketball skills",
+	"contagious diseases",
+	`large ${rarr(collection)} collection`,
+	"strong bond with marcus",
+	"viral techno music",
+	"graphic design work",
+	"contributions to paleontology",
+	"large bank robberies",
+	"short stories"
+];
+const cousinFact = [
+	"they smell really really bad",
+	"they were with marcus when he was born",
+	"their real name is not known by anyone",
+	"they have 1 million subscribers on YouTube",
+	"they are almost as short as marcus"
+];
+const cousinConclusion = [
+	"we hope you enjoyed this short description of marcus's cousin."
+	"in essence, marcus's cousins are weird as hell.",
+	"isn't that interesting?",
+	"if you are this cousin and you want to complain, don't."
+];
+document.getElementById("cousin").innerText = `
+	marcus has a ${rarr(["first","second"])} cousin named ${rarr(cousinNames)} ${rarr(cousinSurnames)} who is ${rint(5,33)} years old.
+	they are known for their ${rarr(cousinKnownFor)} and ${rarr(cousinFact)}. ${rarr(cousinConclusion)}
+`;
 	</script>
 </body>
 </html>
