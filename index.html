@@ -84,6 +84,8 @@ h2 {
 }
 
 .chat {
+	color:#000;
+	text-align:left;
 	position:fixed;
 	width:80vw;
 	max-width:150px;
@@ -293,14 +295,17 @@ h2 {
 		But I'd face them by myself if I only had the balls
 	</div>
   <div class="wojak"></div>
-  <div class="chat"><span id="chat_title">Chat</span><br><div id="msgs"></div><input id="chat_input"><button id="send">Send</button></div>
+  <div class="chat"><span id="chat_title">Chat</span><br><div id="msgs"></div><input id="chat_input"><button id="send">&#10148;</button></div>
 	<script>
 
+function id(x) {return document.getElementById(x)}
 function rarr(array) {return array[Math.floor(Math.random() * array.length)];};
 function rint(min, max) {return Math.floor(Math.random() * (max - min + 1) ) + min;};
-document.getElementById("fluid").addEventListener("click",() => {alert("got you to touch it")})
-document.getElementById("send").addEventListener("click",() => {
-	document.getElementById("msgs").innerHTML += `You cannot talk to Marcus.<br>`
+id("fluid").addEventListener("click",() => {alert("got you to touch it")})
+id("send").addEventListener("click",() => {
+	id("msgs").innerText += `You: ${id("chat_input").value}`;
+	id("msgs").innerText += `Marcus: ok`;
+	id("msgs").appendChild(document.createElement("br"));
 })
 
 const cousinNames = [
