@@ -308,12 +308,27 @@ function id(x) {return document.getElementById(x)}
 function rarr(array) {return array[Math.floor(Math.random() * array.length)];};
 function rint(min, max) {return Math.floor(Math.random() * (max - min + 1) ) + min;};
 id("fluid").addEventListener("click",() => {alert("got you to touch it")})
-id("send").addEventListener("click",() => {
+id("chat_input").addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {sendMsg(event)}
+})
+id("send").addEventListener("click",sendMsg)
+
+var marcusMsgs = [
+	"ok",
+	"hi",
+	"no",
+	"thank you",
+	"why",
+	"i don't know"
+]
+function sendMsg(ev) {
+	id("chat_input").value = "";
 	id("msgs").innerText += `You: ${id("chat_input").value}`;
 	id("msgs").appendChild(document.createElement("br"));
-	id("msgs").innerText += `Marcus: ok`;
+	id("msgs").innerText += `Marcus: ${rarr(marcusMsgs)}`;
 	id("msgs").appendChild(document.createElement("br"));
-})
+}
+		
 
 const cousinNames = [
 	"Johnny",
