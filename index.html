@@ -83,6 +83,24 @@ h2 {
   animation:john 5s linear 0s infinite normal;
 }
 
+.chat {
+	width:80vw;
+	max-width:150px;
+	bottom:10px;
+	left:10px;
+	background-color:#fff;
+	border-radius:10px;
+}
+#msgs {
+	background-color:#dee;
+	height:150px;
+	overflow-y:scroll;
+}
+#chat_input {
+	width:100%;
+}
+
+
 @keyframes ball {
   100% {transform:rotate(360deg);}
 }  
@@ -261,15 +279,16 @@ h2 {
 		<br>
 		And when the robot army is complete and prepped for war<br>
 		I'll send them to the school and make them kick down the front door<br>
-		And walk towards the maths teacher and use my immense force<br>
-		To make her round E23 to an E24<br>
+		I'll walk towards the maths teacher and use my robot force<br>
+		To make her round my 23 to an E24<br>
 		<br>
 		O Marcuslandia, my lovely home in which I live<br>
 		The harsh and evil school system can't grant me what you give<br>
 		And when there's problems I use robots from within your walls<br>
-		But I would face them myself if I only had the balls
+		But I'd face them by myself if I only had the balls
 	</div>
   <div class="wojak"></div>
+  <div class="chat"><div id="msgs"></div><input id="chat_input"></div>
 	<script>
 
 function rarr(array) {return array[Math.floor(Math.random() * array.length)];};
