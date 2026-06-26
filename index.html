@@ -322,11 +322,11 @@ var marcusMsgs = [
 	"i don't know"
 ]
 function sendMsg(ev) {
-	id("chat_input").value = "";
 	id("msgs").innerText += `You: ${id("chat_input").value}`;
 	id("msgs").appendChild(document.createElement("br"));
 	id("msgs").innerText += `Marcus: ${rarr(marcusMsgs)}`;
 	id("msgs").appendChild(document.createElement("br"));
+	id("chat_input").value = "";
 }
 		
 
