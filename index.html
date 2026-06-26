@@ -84,6 +84,7 @@ h2 {
 }
 
 .chat {
+	position:fixed;
 	width:80vw;
 	max-width:150px;
 	bottom:10px;
@@ -97,9 +98,13 @@ h2 {
 	overflow-y:scroll;
 }
 #chat_input {
-	width:100%;
+	width:80%;
+	box-sizing:border-box;
 }
-
+#send {
+	width:20%;
+	box-sizing:border-box;
+}
 
 @keyframes ball {
   100% {transform:rotate(360deg);}
@@ -288,12 +293,15 @@ h2 {
 		But I'd face them by myself if I only had the balls
 	</div>
   <div class="wojak"></div>
-  <div class="chat"><div id="msgs"></div><input id="chat_input"></div>
+  <div class="chat"><span id="chat_title">Chat</span><br><div id="msgs"></div><input id="chat_input"><button id="send">Send</button></div>
 	<script>
 
 function rarr(array) {return array[Math.floor(Math.random() * array.length)];};
 function rint(min, max) {return Math.floor(Math.random() * (max - min + 1) ) + min;};
 document.getElementById("fluid").addEventListener("click",() => {alert("got you to touch it")})
+document.getElementById("send").addEventListener("click",() => {
+	document.getElementById("msgs").innerHTML += `You cannot talk to Marcus.<br>`
+})
 
 const cousinNames = [
 	"Johnny",
