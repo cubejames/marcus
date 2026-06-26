@@ -84,20 +84,26 @@ h2 {
 }
 
 .chat {
+	font-family:Segoe UI, sans-serif;
 	color:#000;
 	text-align:left;
 	position:fixed;
 	width:80vw;
-	max-width:150px;
+	max-width:200px;
 	bottom:10px;
 	left:10px;
 	background-color:#fff;
 	border-radius:10px;
 }
+#chat_title {
+	font-weight:bold;
+	margin:2px;
+}
 #msgs {
 	background-color:#dee;
-	height:150px;
+	height:200px;
 	overflow-y:scroll;
+	padding:3px;
 }
 #chat_input {
 	width:80%;
@@ -304,6 +310,7 @@ function rint(min, max) {return Math.floor(Math.random() * (max - min + 1) ) + m
 id("fluid").addEventListener("click",() => {alert("got you to touch it")})
 id("send").addEventListener("click",() => {
 	id("msgs").innerText += `You: ${id("chat_input").value}`;
+	id("msgs").appendChild(document.createElement("br"));
 	id("msgs").innerText += `Marcus: ok`;
 	id("msgs").appendChild(document.createElement("br"));
 })
